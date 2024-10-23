@@ -25,40 +25,40 @@ body {
   transition: transform 0.5s ease-in-out;
   gap: 20px;
 }
-
 .slide-card {
-  position: relative;
+  position: relative; /* Ensure the ::after element is relative to .slide-card */
   display: flex;
   flex-direction: column;
-  min-width: 369px !important;
+  min-width: 368px !important;
   height: 280px;
   gap: 10px;
   padding: 10px;
   box-shadow: 1px 10px 67px -71px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 10px 67px -71px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 10px 67px -71px rgba(0, 0, 0, 0.75);
-  border-radius: 2px;
   cursor: pointer;
+  z-index: 1 !important; /* Ensure this is lower than other interactive elements */
   transition: all 0.3s ease-in-out;
+  border: 1px solid #575757; /* Transparent border */
 }
+
 .designation {
   font-size: 16px;
   font-weight: 400;
 }
 .slide-card:hover {
+  border: 1px solid #ffd90095; /* Transparent border */
   transition: all 0.3s ease-in-out;
 }
 .divider {
   width: 10%;
-  height: 2px !important;
-  background-color: #cbcbcb;
+  height: 1px !important;
+  background-color: #575757;
   margin: 0 auto;
   transition: all 0.3s ease-in-out;
 }
 .slide-card:hover .divider {
-  width: 100%;
+  width: 90%;
   height: 2px;
-  background-color: #b78628;
+  background-color: #ffd90095;
   transition: all 0.3s ease-in-out;
 }
 .slider-top {
@@ -94,7 +94,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .slide-card:hover i {
-  color: #575757;
+  color: #ffd90095;
   transition: all 0.3s ease-in-out;
 }
 .slider-icons-group i {
@@ -129,7 +129,8 @@ body {
 }
 
 .slider-dot.active {
-  background-color: #1b3a57 !important;
+  
+  background-color: #ffd90095 !important;
 }
 
 .slider-dot {
@@ -170,7 +171,7 @@ body {
 
 .next {
   color: white;
-  background-color: #1b3a57;
+  background-color: #ffd90095;
 }
 
 .prev {
@@ -212,7 +213,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    border: 1px solid #1b3a57;
+    border: 1px solid #ffd90095;
     min-width: 100% !important;
     height: 280px;
     gap: 10px;

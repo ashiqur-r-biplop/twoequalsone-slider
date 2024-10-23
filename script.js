@@ -29,13 +29,13 @@ function updateButtonColors(index) {
   if (index === 0) {
     prevButton.style.backgroundColor = "#222020";
   } else {
-    prevButton.style.backgroundColor = "#1B3A57";
+    prevButton.style.backgroundColor = "#ffd90095";
   }
 
   if (index >= totalSlides - 3) {
     nextButton.style.backgroundColor = "#222020";
   } else {
-    nextButton.style.backgroundColor = "#1B3A57";
+    nextButton.style.backgroundColor = "#ffd90095";
   }
 }
 
